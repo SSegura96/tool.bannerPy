@@ -1,6 +1,7 @@
 # Venv
 .banner
 .bannerpy
+.vm
 
 # IDEs
 .vscode

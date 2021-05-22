@@ -34,14 +34,22 @@ def read_file(file_path):
 
 
 def pull_banner_content(settings, git):
-    git_file = git.get_file_by_hostname(settings["current_hostname"])
-    file_content = git_file["content"]
-    write_file(settings["banner_path"], file_content)
+    resp = input("Are you sure you want to download the remote banner for {settings['current_hostname']}? (y/N)")
+    if resp == "y":
+        git_file = git.get_file_by_hostname(settings["current_hostname"])
+        file_content = git_file["content"]
+        write_file(settings["banner_path"], file_content)
+        return "Banner File Successfully Downloaded"
+    return "No changes were applied"
 
 
 def push_banner_content(settings, git):
-    banner_content = read_file(settings["banner_path"])
-    git.update_file(settings["current_hostname"], banner_content)
+    resp = input(f"Are you sure you want to upload your local banner for {settings['current_hostname']}? (y/N)")
+    if resp == "y":
+        banner_content = read_file(settings["banner_path"])
+        git.update_file(settings["current_hostname"], banner_content)
+        return "Banner File Successfully Uploaded"
+    return "No changes were applied"
 
 
 def main():
@@ -51,12 +59,10 @@ def main():
     if len(sys.argv) > 1:
         if sys.argv[1] == "pull":
             show_processing_message(settings["os"])
-            pull_banner_content(settings, git)
-            message = "Banner File Successfully Downloaded"
+            message = pull_banner_content(settings, git) 
         elif sys.argv[1] == "push":
             show_processing_message(settings["os"])
-            push_banner_content(settings, git)
-            message = "Banner File Successfully Uploaded"
+            message = push_banner_content(settings, git)
         else:
             message = "Error: the operation was not found"
         print(message)
