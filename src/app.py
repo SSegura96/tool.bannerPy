@@ -1,5 +1,5 @@
-from settings import Settings
-from github import Github
+from src.settings import Settings
+from src.github import Github
 import sys
 import os
 
@@ -26,8 +26,11 @@ def write_file(file_path, body):
 
 
 def read_file(file_path):
-    with open(file_path, "r") as file:
-        return file.read()
+    try:
+        with open(file_path, "r") as file:
+            return file.read()
+    except FileNotFoundError:
+        print('Error: couldn\'t find "banner.info" file please run the "pull" operation first')
 
 
 def pull_banner_content(settings, git):
@@ -41,7 +44,7 @@ def push_banner_content(settings, git):
     git.update_file(settings["current_hostname"], banner_content)
 
 
-if __name__ == '__main__':
+def main():
     settings = Settings.get_settings()
     git = Github()
 
@@ -62,4 +65,9 @@ if __name__ == '__main__':
         banner_content = read_file(settings["banner_path"])
         if settings["has_neofetch"]:
             print(os.popen("neofetch").read() + "\n")
-        print(banner_content)
+        if banner_content is not None: 
+            print(banner_content)
+
+
+if __name__ == '__main__':
+    exit(main())
