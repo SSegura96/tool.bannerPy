@@ -1,0 +1,20 @@
+{
+	"github":{
+		"auth_token":"",
+		"gist_url":""
+	},
+	"hostnames":{
+		"hostname1":{
+			"os":"Windows",
+			"has_neofetch": false
+		},
+		"hostname2":{
+			"os":"Linux",
+			"has_neofetch": false
+		},
+		"hostname3":{
+			"os":"Mac",
+			"has_neofetch": false
+		}
+	}
+}
