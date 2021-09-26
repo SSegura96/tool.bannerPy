@@ -1,0 +1,27 @@
+
+
+
+/$$$$$$$                                                    /$$$$$$$           
+| $$__  $$                                                  | $$__  $$          
+| $$  \ $$  /$$$$$$  /$$$$$$$  /$$$$$$$   /$$$$$$   /$$$$$$ | $$  \ $$ /$$   /$$
+| $$$$$$$  |____  $$| $$__  $$| $$__  $$ /$$__  $$ /$$__  $$| $$$$$$$/| $$  | $$
+| $$__  $$  /$$$$$$$| $$  \ $$| $$  \ $$| $$$$$$$$| $$  \__/| $$____/ | $$  | $$
+| $$  \ $$ /$$__  $$| $$  | $$| $$  | $$| $$_____/| $$      | $$      | $$  | $$
+| $$$$$$$/|  $$$$$$$| $$  | $$| $$  | $$|  $$$$$$$| $$      | $$      |  $$$$$$$
+|_______/  \_______/|__/  |__/|__/  |__/ \_______/|__/      |__/       \____  $$
+                                                                       /$$  | $$
+                                                                      |  $$$$$$/
+                                                                       \______/ 
+Welcome to Bannerpy !!!
+
+
+First perform the application setup at ~/.bannerpy/config.json
+Then you can modify your banner at ~/.bannerpy/banner.info
+
+- Type bannerpy init to initialize the banner in the github gist.
+
+- Type bannerpy pull to download the latest version from Github Gist.
+
+- Type bannerpy push to upload a new version.
+
+

@@ -1,9 +1,11 @@
-from src.settings import Settings
+from settings import Settings
 import requests
 import json
 
+# TODO Refactory
 
-class Github():
+
+class GithubApiImplementation():
     def __init__(self):
         settings = Settings.get_settings()
 
