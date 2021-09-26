@@ -1,7 +1,6 @@
 from pathlib import Path
-from utils import Utils
+from src.utils import Utils
 import socket
-import menu
 import json
 import os
 
@@ -41,7 +40,7 @@ class Settings:
                                    self.BANNER_FILENAME)
         if not Utils.check_file_exist(banner_path):
             self.generate_banner()
-            menu.Menu.clear_screen()
+            os.system("cls || clear")
             print(Utils.read_file(banner_path))
             configuration = False
         return configuration

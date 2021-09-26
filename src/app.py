@@ -1,7 +1,7 @@
-from github_api_implementation import GithubApiImplementation as githubAPI
-from settings import Settings
-from menu import Menu
-from utils import Utils
+from src.github_api_implementation import GithubApiImplementation as githubAPI
+from src.settings import Settings
+from src.menu import Menu
+from src.utils import Utils
 import sys
 import os
 
