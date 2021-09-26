@@ -1,17 +1,12 @@
-from settings import Settings
 import requests
 import json
 
-# TODO Refactory
-
 
 class GithubApiImplementation():
-    def __init__(self):
-        settings = Settings.get_settings()
-
-        self.url = settings["gist_url"]
+    def __init__(self, githubAPI_url, githubAPI_token):
+        self.url = githubAPI_url
         self.headers = {
-            'Authorization': f'Token {settings["auth_token"]}',
+            'Authorization': "Token " + githubAPI_token,
             'Content-Type': 'application/json'
         }
 

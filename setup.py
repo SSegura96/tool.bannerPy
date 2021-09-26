@@ -2,20 +2,16 @@ from setuptools import find_packages
 from setuptools import setup
 
 REQUIRED_PACKAGES = [
-    'certifi==2020.12.5',
-    'chardet==4.0.0',
-    'idna==2.10',
-    'requests==2.25.1',
-    'urllib3==1.26.4',
+    'requests'
 ]
 
 setup(
     name='BannerPy',
-    version='1.0.0',
+    version='2.1.1',
     description='A python app that shows a banner from a GitHub gist',
     author='Sergio Segura',
     author_email='TheLastRKoch@gmail.com',
-    url="https://github.com/TheLastRKoch/BannerPy",
+    url="https://github.com/TheLastRKoch/tool.BannerPy",
     packages=find_packages(),
     entry_points={
         'console_scripts': [

@@ -49,7 +49,7 @@ def main():
     if isOk:
         settings = Settings.get_settings()
         if settings is not None:
-            git = githubAPI()
+            git = githubAPI(settings["gist_url"], settings["auth_token"])
             Menu.show_greet()
             if len(sys.argv) > 1:
                 # Runned with init
