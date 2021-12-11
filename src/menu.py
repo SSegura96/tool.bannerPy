@@ -9,7 +9,7 @@ class Menu:
 
     @classmethod
     def clear_screen(self):
-        os.system("cls || clear")
+        os.system("clear")
 
     @classmethod
     def show_processing_message(self):
