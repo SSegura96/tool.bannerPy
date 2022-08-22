@@ -8,8 +8,8 @@ import os
 
 def show_banner(settings):
     Menu.clear_screen()
-    banner_content = Utils.read_file(settings["banner_path"])
-    if banner_content is not None:
+    banner_content = os.popen("cat "+settings["banner_path"]).read()
+    if banner_content != "":
         if settings["has_neofetch"]:
             print(os.popen("neofetch").read() + "\n")
         return banner_content
