@@ -1,13 +1,12 @@
-from src.github_api_implementation import GithubApiImplementation as githubAPI
-from src.settings import Settings
-from src.menu import Menu
-from src.utils import Utils
+from github_api_implementation import GithubApiImplementation as githubAPI
+from settings import Settings
+from menu import Menu
+from utils import Utils
 import sys
 import os
 
 
 def show_banner(settings):
-    Menu.clear_screen()
     banner_content = os.popen("cat "+settings["banner_path"]).read()
     if banner_content != "":
         if settings["has_neofetch"]:

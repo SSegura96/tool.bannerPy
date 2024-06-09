@@ -1,5 +1,5 @@
 from pathlib import Path
-from src.utils import Utils
+from utils import Utils
 import socket
 import json
 import os

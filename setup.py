@@ -15,7 +15,7 @@ setup(
     packages=find_packages(),
     entry_points={
         'console_scripts': [
-            'bannerpy = src.app:main'
+            'bannerpy = app:main'
         ]
     },
     install_requires=REQUIRED_PACKAGES,

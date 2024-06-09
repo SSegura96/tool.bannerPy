@@ -2,6 +2,7 @@
 .banner
 .bannerpy
 .vm
+.ve/
 
 # IDEs
 .vscode
