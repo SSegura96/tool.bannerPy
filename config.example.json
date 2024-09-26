@@ -1,7 +1,7 @@
 {
   "github": {
     "auth_token": "",
-    "gist_url": ""
+    "gist_url": "https://api.github.com/gists/[Add Your GIST ID]"
   },
   "settings": {
     "os": "Linux",
